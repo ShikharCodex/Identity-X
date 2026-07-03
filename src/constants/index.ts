@@ -1,7 +1,7 @@
 import { ArrowUpRight, ArrowRight, ArrowDownRight } from "lucide-react";
 import { Badge, Book, Project, NavItem } from "@/types";
 
-export const NAV_ITEMS: NavItem[] = [
+export const NAV_ITEMS: readonly NavItem[] = [
   { name: "About", href: "#about", Arrow: ArrowUpRight },
   { name: "Projects", href: "#projects", Arrow: ArrowRight },
   { name: "Experience", href: "#experience", Arrow: ArrowRight },
@@ -9,7 +9,7 @@ export const NAV_ITEMS: NavItem[] = [
   { name: "Hex", href: "#hex", Arrow: ArrowDownRight },
 ];
 
-export const BADGES: Badge[] = [
+export const BADGES: readonly Badge[] = [
   {
     id: "java",
     bgColor: "#cfc5b4",
@@ -86,7 +86,7 @@ export const BADGES: Badge[] = [
   }
 ];
 
-export const BOOKS: Book[] = [
+export const BOOKS: readonly Book[] = [
   {
     title: "ATOMIC HABITS",
     author: "JAMES CLEAR",
@@ -281,7 +281,7 @@ export const BOOKS: Book[] = [
   }
 ];
 
-export const PROJECTS: Project[] = [
+export const PROJECTS: readonly Project[] = [
   { type: "folder", color: "#FFF000", label: "Locofy", link: "https://www.locofy.xyz/" },
   { type: "folder", color: "#FFF000", label: "chatApp", link: "https://github.com/" },
   { type: "folder", color: "#FFF000", label: "Port.v1", link: "https://www.shikharx.xyz/" },

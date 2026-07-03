@@ -29,6 +29,8 @@ export default function Navbar() {
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="font-mono uppercase text-sm md:text-base tracking-widest hover:opacity-70 transition-opacity pointer-events-auto"
+          aria-expanded={isOpen}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
         >
           {isOpen ? "Close" : "Menu"}
         </button>

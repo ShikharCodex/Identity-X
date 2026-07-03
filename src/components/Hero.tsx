@@ -1,8 +1,9 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 
-const MarqueeContent = () => (
+const MarqueeContent = React.memo(() => (
   <>
     <span>Shikhar</span>
     <span className="opacity-50">✦</span>
@@ -17,7 +18,8 @@ const MarqueeContent = () => (
     <span>Homo Sapiens</span>
     <span className="opacity-50">✦</span>
   </>
-);
+));
+MarqueeContent.displayName = "MarqueeContent";
 
 export default function Hero() {
   return (

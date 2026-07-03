@@ -1,47 +1,48 @@
 // Types for the portfolio website
+import type { LucideIcon } from 'lucide-react';
 
 export interface BadgeDetails {
-  description: string;
-  achievements: string[];
-  tech: string[];
+  readonly description: string;
+  readonly achievements: readonly string[];
+  readonly tech: readonly string[];
 }
 
 export interface Badge {
-  id: string;
-  bgColor: string;
-  textColor: string;
-  strapColor: string;
-  role: string;
-  company: string;
-  date: string;
-  access: string;
-  yOffset: number;
-  details: BadgeDetails;
+  readonly id: string;
+  readonly bgColor: string;
+  readonly textColor: string;
+  readonly strapColor: string;
+  readonly role: string;
+  readonly company: string;
+  readonly date: string;
+  readonly access: string;
+  readonly yOffset: number;
+  readonly details: BadgeDetails;
 }
 
 export interface Book {
-  title: string;
-  author: string;
-  bgColor: string;
-  textColor: string;
-  width: string;
-  height: string;
-  font: string;
-  layout: string;
-  tilted: boolean;
-  readDirection: 'top-down' | 'bottom-up';
+  readonly title: string;
+  readonly author: string;
+  readonly bgColor: string;
+  readonly textColor: string;
+  readonly width: string;
+  readonly height: string;
+  readonly font: string;
+  readonly layout: string;
+  readonly tilted: boolean;
+  readonly readDirection: 'top-down' | 'bottom-up';
 }
 
 export interface Project {
-  type: 'folder' | 'txt';
-  label: string;
-  link: string;
-  color?: string;
-  isDownload?: boolean;
+  readonly type: 'folder' | 'txt';
+  readonly label: string;
+  readonly link: string;
+  readonly color?: string;
+  readonly isDownload?: boolean;
 }
 
 export interface NavItem {
-  name: string;
-  href: string;
-  Arrow: React.ComponentType<React.SVGProps<SVGSVGElement> & { size?: number | string; strokeWidth?: number | string }>; // Lucide icon component
+  readonly name: string;
+  readonly href: string;
+  readonly Arrow: LucideIcon;
 }

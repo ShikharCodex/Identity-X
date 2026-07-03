@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
+import { useScroll } from "framer-motion";
 
 const paragraph = "Building with Code, Thinking through Chess, and discussing AI with my Dog. Sometimes I Like is Travelling & Eating, I don't know my Self. But I really know is \"Shikhar don't like Homo Sapiens\"";
 
@@ -35,13 +35,4 @@ export default function About() {
   );
 }
 
-const Word = ({ word, progress, range }: { word: string, progress: MotionValue<number>, range: [number, number] }) => {
-  const opacity = useTransform(progress, range, [0, 1]);
-
-  return (
-    <span className="mr-2 sm:mr-3 md:mr-4 lg:mr-5 mt-1 md:mt-2 relative">
-      <span className="absolute text-white/15">{word}</span>
-      <motion.span style={{ opacity }} className="text-white relative z-10">{word}</motion.span>
-    </span>
-  );
-}
+import { Word } from "./ui/Word";

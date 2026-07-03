@@ -152,6 +152,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shikhar",
+    "url": "https://your-domain.com",
+    "jobTitle": "AI Engineer & Full-Stack Developer",
+    "sameAs": [
+      "https://github.com/ShikharCodex",
+      "https://www.linkedin.com/in/shikhar-x-9158b8409"
+    ]
+  };
+
   return (
     <html
       lang="en"
@@ -159,6 +171,10 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Navbar />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
