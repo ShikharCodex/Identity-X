@@ -5,6 +5,8 @@ import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import Navbar from "@/components/Navbar";
 
+const SITE_URL = "https://shikhardev-zeta.vercel.app";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -16,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://your-domain.com"),
+  metadataBase: new URL(SITE_URL),
 
   title: {
     default: "ShikharX | AI Engineer • Full-Stack Developer • Agentic AI Builder",
@@ -31,12 +33,11 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Shikhar",
-      url: "https://your-domain.com",
+      url: SITE_URL,
     },
   ],
 
   creator: "Shikhar",
-
   publisher: "Shikhar",
 
   category: "Technology",
@@ -65,14 +66,14 @@ export const metadata: Metadata = {
     "MongoDB",
     "PostgreSQL",
     "Tailwind CSS",
-    "Three.js",
+    "MCP",
     "GSAP",
-    "Web Animations",
+    "Web Design",
     "Frontend Developer",
     "Backend Developer",
     "Software Engineer",
     "SaaS Developer",
-    "Startup Founder",
+    "Application Developer",
     "Web Performance",
     "Developer Portfolio",
     "Creative Developer",
@@ -82,7 +83,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://your-domain.com",
+    url: SITE_URL,
 
     title: "ShikharX | AI Engineer & Full-Stack Developer",
 
@@ -93,7 +94,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/og-image.png",
+        url: `${SITE_URL}/og-image.png`,
         width: 1200,
         height: 630,
         alt: "ShikharX Portfolio",
@@ -109,9 +110,9 @@ export const metadata: Metadata = {
     description:
       "AI Agents • RAG • Full-Stack Development • Modern SaaS • Creative Engineering",
 
-    creator: "@yourusername",
+    creator: "@shikharcodex",
 
-    images: ["/og-image.png"],
+    images: [`${SITE_URL}/og-image.png`],
   },
 
   robots: {
@@ -131,7 +132,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://your-domain.com",
+    canonical: SITE_URL,
   },
 
   icons: {
@@ -144,6 +145,7 @@ export const metadata: Metadata = {
 
   other: {
     "theme-color": "#000000",
+    "color-scheme": "dark",
   },
 };
 
@@ -155,13 +157,16 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Shikhar",
-    "url": "https://your-domain.com",
-    "jobTitle": "AI Engineer & Full-Stack Developer",
-    "sameAs": [
+    name: "Shikhar",
+    url: SITE_URL,
+    image: `${SITE_URL}/og-image.png`,
+    jobTitle: "AI Engineer & Full-Stack Developer",
+    description:
+      "AI Engineer, Full-Stack Developer, and Agentic AI Builder creating production-grade AI applications and modern web experiences.",
+    sameAs: [
       "https://github.com/ShikharCodex",
-      "https://www.linkedin.com/in/shikhar-x-9158b8409"
-    ]
+      "https://www.linkedin.com/in/shikhar-x-9158b8409",
+    ],
   };
 
   return (
@@ -170,12 +175,19 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col" suppressHydrationWarning>
+      <body
+        className="min-h-full flex flex-col bg-black text-white"
+        suppressHydrationWarning
+      >
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd),
+          }}
         />
+
         <Navbar />
+
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
