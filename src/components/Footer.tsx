@@ -32,7 +32,7 @@ export default function Footer() {
             <div className="flex flex-col gap-3 md:gap-4">
               <h3 className="text-sm font-semibold text-white/90 mb-1 md:mb-2">Social</h3>
               <a href="https://github.com/ShikharCodex" className="text-[13px] md:text-sm text-white/50 hover:text-white transition-colors">GitHub</a>
-              <a href="https://www.linkedin.com/in/shikhar-x-9158b8409 " className="text-[13px] md:text-sm text-white/50 hover:text-white transition-colors">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/shikhar-x-9158b8409" className="text-[13px] md:text-sm text-white/50 hover:text-white transition-colors">LinkedIn</a>
               <a href="https://x.com/ShikharCodex" className="text-[13px] md:text-sm text-white/50 hover:text-white transition-colors">X - Twitter</a>
               <a href="https://www.instagram.com/shikharcodex?igsh=MTU5OTB0dWp2d3g3dg==" className="text-[13px] md:text-sm text-white/50 hover:text-white transition-colors">Instagram</a>
             </div>
