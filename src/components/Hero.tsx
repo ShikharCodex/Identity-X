@@ -62,7 +62,7 @@ export default function Hero() {
           className="mt-4 font-bold text-accent tracking-[0.5em] text-xs md:text-xl uppercase"
           style={{ textShadow: "0 0 10px rgba(255,0,0,0.5)" }}
         >
-          I Like TON 618
+          Nemophilist
         </motion.p>
       </div>
 
